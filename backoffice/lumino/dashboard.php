@@ -1,6 +1,6 @@
 <?PHP
 
-require "include/dbms.inc.php.php";
+require "include/dbms.inc.php";
  require "include/template2.inc.php";
  require "include/lumino.inc.php";
  require "include/auth.inc.php";
