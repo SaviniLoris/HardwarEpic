@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin-HardwareEpic</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>HardwareEpic</span>Admin</a>
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown">
+								<a class="dropdown-toggle count-info" href="admin.php?logout" aria-expanded="true">
+								<em class="fa fa-power-off"></em>
+								</a>
+							</li>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://www.esek.org.gr/images/ESET/eset_user.png" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name"><[username]></div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<ul class="nav menu">
+			<li class="parent"><a href="dashboard.php"><em class="fa fa-dashboard">&nbsp;</em>Dashboard</a></li>
+			<!-- Users -->
+					<li class="parent">
+						<a data-toggle="collapse" href="#Users">
+							<em class="fa fa-user-plus">&nbsp;</em>
+							 Users
+							<span data-toggle="collapse" href="#Users" class="icon pull-right">
+								<em class="fa fa-plus"></em>
+							</span>
+						</a>
+						<ul class="children collapse" id="Users">
+							<li>
+								<a class="" href="user.php">
+								<span class="fa fa-arrow-right">&nbsp;</span> Users Delete
+								</a>
+							</li>
+							<li>
+								<a class="" href="users-create.php">
+								<span class="fa fa-arrow-right">&nbsp;</span> Users Insert
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Users Update
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- END_Users -->
+			<!-- Product -->
+					<li>
+						<a data-toggle="collapse" href="#Product">
+							<em class="fa fa-circle">&nbsp;</em>
+							 Products
+							<span data-toggle="collapse" href="products.html" class="icon pull-right" >
+								<em class="fa fa-plus"></em>
+							</span>
+						</a>
+						<ul class="children collapse" id="Product">
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Products List
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Products Insert
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Products Update
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- END_Product -->
+
+					<!-- Orders -->
+					<li class="parent ">
+						<a data-toggle="collapse" href="#Orders">
+							<em class="fa fa-shopping-cart">&nbsp;</em>
+							 Orders
+							<span data-toggle="collapse" href="#Orders" class="icon pull-right">
+								<em class="fa fa-plus"></em>
+							</span>
+						</a>
+						<ul class="children collapse" id="Orders">
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Orders List
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- END_Orders -->
+
+					<!-- Category -->
+					<li class="parent ">
+						<a data-toggle="collapse" href="#Category">
+							<em class="fa fa-folder-open">&nbsp;</em>
+							 Category
+							<span data-toggle="collapse" href="#Category" class="icon pull-right">
+								<em class="fa fa-plus"></em>
+							</span>
+						</a>
+						<ul class="children collapse" id="Category">
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Category List
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Category Insert
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Category Update
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- END_Category -->
+
+					<!-- Catalog -->
+					<li class="parent ">
+						<a data-toggle="collapse" href="#Catalog">
+							<em class="fa fa-book">&nbsp;</em>
+							 Catalog
+							<span data-toggle="collapse" href="#Catalog" class="icon pull-right">
+								<em class="fa fa-plus"></em>
+							</span>
+						</a>
+						<ul class="children collapse" id="Catalog">
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Catalog List
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Catalog Insert
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Catalog Update
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- END_Catalog -->
+
+					<!-- Warehouse -->
+					<li class="parent ">
+						<a data-toggle="collapse" href="#Warehouse">
+							<em class="fa fa-bank">&nbsp;</em>
+							 Warehouse
+							<span data-toggle="collapse" href="#Warehouse" class="icon pull-right">
+								<em class="fa fa-plus"></em>
+							</span>
+						</a>
+						<ul class="children collapse" id="Warehouse">
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Warehouse List
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Warehouse Insert
+								</a>
+							</li>
+							<li>
+								<a class="" href="#">
+								<span class="fa fa-arrow-right">&nbsp;</span> Warehouse Update
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- END_Warehouse -->
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="admin.php">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="aba"><[title]></li>
+			</ol>
+		</div><!--/.row-->
+		
+		<[body]>
+		
+	</div>	<!--/.main-->
+	
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+	
+		window.onload = function () {
+	var chart1 = document.getElementById("line-chart").getContext("2d");
+	window.myLine = new Chart(chart1).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+};
+	</script>
+		
+</body>
+</html>

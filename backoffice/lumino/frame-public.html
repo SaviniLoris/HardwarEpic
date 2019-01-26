@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Admin | Gamerage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.min"></script><![endif]-->
+  <link rel="shortcut icon" href="../themes/default/assets/images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../themes/default/assets/css/main.css" />
+  <link rel="stylesheet" href="../themes/default/assets/css/personal.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/pell/dist/pell.min.css">
+  <!--[if lte IE 9]><link rel="stylesheet" href="../themes/default/assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="../themes/default/assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body class="single">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <h1><a href="admin.php">Gamerage Admin Panel</a></h1>
+      <nav class="links">
+        <ul style="display:flex; flex-direction:row; margin-top: 1.2em;">
+          <li><a href="admin-user.php">Utenti</a></li>
+          <li><a href="admin-product.php">Prodotti</a></li>
+          <li><a href="admin-order.php">Ordini</a></li>
+        </ul>
+      </nav>
+      <nav class="main">
+        <ul>
+          <li onClick="location.href='../';" style="cursor:pointer;">
+            <a class="fa-arrow-circle-left">Utente</a>
+            <span style="margin-right: 2em;"><strong>Esci</strong></span>
+          </li>
+          <li class="menu">
+            <a class="fa-bars" href="#menu">Menu</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Menu -->
+    <section id="menu">
+      <!-- Links -->
+      <section>
+        <ul class="links">
+          <li>
+            <a href="admin-user.php">
+              <h3><a href="admin-user.php">Utenti</a></h3>
+              <p>Amministra gli utenti</p>
+            </a>
+          </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-user-promote.php">Promuovi utente</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-user-demote.php">Retrocedi utente</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-user-edit.php">Modifica dati utente</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-user-add-trophy.php">Aggiungi trofeo a un utente</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-user-delete.php">Elimina utente</a></h3>
+              </a>
+            </li>
+          <li>
+            <a href="admin-product.php">
+              <h3><a href="admin-product.php">Prodotti</a></h3>
+              <p>Amministra i prodotti</p>
+            </a>
+          </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-product-insert.php">Inserisci prodotto</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-product-edit.php">Modifica prodotto</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-product-delete.php">Elimina prodotto</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-product-coupon-insert">Inserisci coupon</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-product-coupon-edit">Visualizza/Modifica coupon</a></h3>
+              </a>
+            </li>
+            <li style="font-size:.7em; padding-left: 2em;">
+              <a href="#">
+                <h3><a href="admin-product-coupon-delete">Rimouvi coupon</a></h3>
+              </a>
+            </li>
+          <li>
+            <a href="admin-order.php">
+              <h3><a href="admin-order.php">Ordini</a></h3>
+              <p>Amministra gli ordini effettuati dagli utenti</p>
+            </a>
+          </li>
+          <li style="margin-top:5em;">
+            <a href="../">
+              <h3><a href="../">Esci</a></h3>
+              <p>Esci dal pannello admin e torna al sito.</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Actions -->
+      <section>
+        <[logout]>
+      </section>
+
+    </section>
+
+    <[body]>
+
+    <!-- Footer -->
+    <section id="footer">
+      <p class="copyright">&copy;Gamerage</p>
+    </section>
+
+  </div>
+
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modal-text"></p>
+    <ul id="modal-buttons" class="actions" style="text-align:center;">
+      <li><a class="button blue confirm">Conferma</a></li>
+      <li><a class="button red close">Annulla</a></li>
+    </ul>
+  </div>
+
+</div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="../themes/default/assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  <script src="../themes/default/assets/js/main.js"></script>
+
+  <script>
+    var script = "";
+    $(document).on('click', '.user-click', function() {
+      var action = $(this).attr("action");
+      var username = $(this).attr("username");
+      script = 'admin-user-' + action + '.php?' + action + '=' + username;
+      modal.style.display = "block";
+      var text = document.getElementById("modal-text");
+      if(action == "promote") {
+        text.innerHTML = "Sei sicuro di voler promuovere '<strong>" + username + "</strong>'?";
+      } else if(action == "demote") {
+        text.innerHTML = "Sei sicuro di voler retrocedere '<strong>" + username + "</strong>'?";
+      } else if(action == "edit") {
+        text.innerHTML = "Modificare i dati dell'utente '<strong>" + username + "</strong>'?";
+      } else if(action == "delete") {
+        text.innerHTML = "Sei sicuro di voler rimuovere definitivamente l'utente '<strong>" + username + "</strong>'?";
+      } else if(action == "add-trophy") {
+        text.innerHTML = "Assegnare un trofeo all'utente '<strong>" + username + "</strong>'?";
+      }
+    });
+    $(document).on('click', '.product-click', function() {
+      var action = $(this).attr("action");
+      var id_prodotto = $(this).attr("product");
+      var id_coupon = $(this).attr("coupon");
+      var titolo = $(this).attr("titolo");
+      var text = document.getElementById("modal-text");
+      if(action == "edit" || action == "coupon-insert")
+        window.location.href = 'admin-product-' + action + '.php?' + action + '=' + id_prodotto;
+      else if(action == "coupon-edit")
+        window.location.href = 'admin-product-' + action + '.php?' + action + '=' + id_coupon;
+      else if(action == "coupon-delete") {
+        modal.style.display = "block";
+        text.innerHTML = "Sei sicuro di voler eliminare il coupon \'<strong>" + titolo + "</strong>\'?";
+        script = 'admin-product-' + action + '.php?' + action + '=' + id_coupon;
+      }else if(action == "delete") {
+        modal.style.display = "block";
+        text.innerHTML = "Sei sicuro di voler eliminare definitivamente \'<strong>" + titolo + "</strong>\' dal Database?";
+        script = 'admin-product-' + action + '.php?' + action + '=' + id_prodotto + '&all';
+      } else if(action == "review-delete")
+        window.location.href = 'admin-product-review-delete.php?' + action + '=' + id_prodotto;
+    });
+    $(document).on('click', '.order-click', function() {
+      var action = $(this).attr("action");
+      var username = $(this).attr("username");
+      var id_ordine = $(this).attr("order");
+      var text = document.getElementById("modal-text");
+      if(action == "order-edit-by-user")
+        window.location.href = 'admin-order-edit.php?user=' + username;
+      else if(action == "order-edit-by-id")
+        window.location.href = 'admin-order-edit.php?id=' + id_ordine;
+      else if(action == "order-purchase-by-user")
+        window.location.href = 'admin-order-purchase.php?user=' + username;
+      else if(action == "order-purchase-by-id")
+        window.location.href = 'admin-order-purchase.php?id=' + id_ordine;
+      else if(action == "order-purchase") {
+        modal.style.display = "block";
+        text.innerHTML = "Approvare questo ordine, effettuato dall\'utente \'<strong>" + username + "</strong>\'?";
+        script = 'admin-order-edit.php?purchase=' + id_ordine;
+      } else if(action == "order-delete") {
+        text.innerHTML = "Sei sicuro di voler rimuovere definitivamente questo ordine, effettuato dall\'utente \'<strong>" + username + "</strong>\'?";
+        script = 'admin-order-edit.php?delete=' + id_ordine;
+      }
+    });
+
+    $('.pell-button-custom').click(function(e) {
+      e.preventDefault();
+    })
+    $('.pell-content').on('input', function() {
+      $('#descrizione').val($('.pell-content').html());
+    })
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    $(".close").click(function() {
+      modal.style.display = "none";
+    });
+
+    $(".confirm").click(function() {
+      window.location.href = script;
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) modal.style.display = "none";
+    }
+
+    $('[name="user-search"]').on('keyup', function (e) {
+      if(e.target.value === '') location.reload();
+      $.post( "ajaxUserSearch.php", { term: e.target.value, action: $(this).attr('class') })
+        .done(function(data) {
+          $('.users-container').html(data.html)
+        });
+    });
+
+    $('[name="product-search"]').on('keyup', function (e) {
+      if(e.target.value === '') location.reload();
+      $.post( "ajaxProductSearch.php", { term: e.target.value, action: $(this).attr('class') })
+        .done(function(data) {
+          console.log(data);
+          $('.product-container').html(data.html)
+        });
+    });
+  </script>
+
+</body>
+
+</html>
